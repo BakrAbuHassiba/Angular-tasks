@@ -1,0 +1,12 @@
+<div class="slider">
+  <button (click)="prev()">Prev</button>
+  <img [src]="currentImage" alt="slider image" width="400" height="250" />
+  <button (click)="next()">Next</button>
+</div>
+
+<div class="buttons">
+  <button (click)="play()">Play</button>
+  <button (click)="stop()">Stop</button>
+  <button (click)="changeSpeed(1000)">Faster</button>
+  <button (click)="changeSpeed(5000)">Slower</button>
+</div>
