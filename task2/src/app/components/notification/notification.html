@@ -1,0 +1,42 @@
+<div class="container">
+  <h1>Notification Center</h1>
+
+  <div>
+    <input
+      type="text"
+      placeholder="Enter type (success, error, warning, info)"
+      [(ngModel)]="messageType"
+    />
+    <button (click)="addNotification()">Add</button>
+  </div>
+
+  @for (type of notifications; track $index) {
+    @switch (type) {
+      @case ('success') {
+        <div class="notification success">
+          <strong>Success</strong> Profile updated successfully!
+        </div>
+      }
+      @case ('error') {
+        <div class="notification error">
+          <strong>Error</strong> Failed to load user data!
+        </div>
+      }
+      @case ('warning') {
+        <div class="notification warning">
+          <strong>Warning</strong> Password is weak!
+        </div>
+      }
+      @case ('info') {
+        <div class="notification info">
+          <strong>Info</strong> New updates are available!
+        </div>
+      }
+      @default {
+        <div class="notification default">
+          <strong>Note</strong> Invalid notification type.
+        </div>
+      }
+    }
+  }
+</div>

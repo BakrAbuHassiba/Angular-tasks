@@ -1,0 +1,13 @@
+<div class="product-list">
+  <div *ngFor="let p of products; let i = index" class="product-card">
+    <h3>{{ p.name }}</h3>
+    <p>Price: {{ p.price }}</p>
+    <p>Category: {{ p.category }}</p>
+
+    <div class="btns">
+      <button class="fav" (click)="onFavorite.emit(p)">Favorite</button>
+      <button class="update" (click)="onEdit.emit(i)">Update</button>
+      <button class="delete" (click)="onDelete.emit(i)">Delete</button>
+    </div>
+  </div>
+</div>

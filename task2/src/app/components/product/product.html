@@ -1,0 +1,25 @@
+<div class="dashboard">
+  <h1>Product Dashboard</h1>
+
+  <div *ngIf="favoriteProducts.length > 0" class="mb-3">
+    <strong>Favorite Products:</strong>
+    <ul>
+      <li *ngFor="let fav of favoriteProducts">{{ fav.name }}</li>
+    </ul>
+  </div>
+
+  <div class="content">
+    <app-product-form
+      [product]="currentProduct"
+      [isEditing]="editingIndex !== null"
+      (onSave)="addOrUpdateProduct($event)"
+    ></app-product-form>
+
+    <app-product-list
+      [products]="products"
+      (onDelete)="deleteProduct($event)"
+      (onEdit)="editProduct($event)"
+      (onFavorite)="favoriteProduct($event)"
+    ></app-product-list>
+  </div>
+</div>
