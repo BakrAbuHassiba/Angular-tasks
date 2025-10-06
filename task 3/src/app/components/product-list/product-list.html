@@ -1,0 +1,8 @@
+<div class="cards-container">
+  <div class="card" *ngFor="let p of products">
+    <img [src]="p.img" alt="{{ p.name }}" />
+    <h3>{{ p.name }}</h3>
+    <p>{{ p.desc }}</p>
+    <span>{{ p.rate }}/5</span>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<form [formGroup]="productForm" class="form-box" (ngSubmit)="onSubmit()">
+  <label>Product Name</label>
+  <input type="text" formControlName="name" placeholder="Enter name" />
+
+  <label>Description</label>
+  <input type="text" formControlName="desc" placeholder="Enter description" />
+
+  <label>Image URL</label>
+  <input type="text" formControlName="img" placeholder="Enter image URL" />
+
+  <label>Rate (1–5)</label>
+  <input type="number" formControlName="rate" placeholder="Enter rating" />
+
+  <button type="submit" [disabled]="!productForm.valid">Display</button>
+</form>

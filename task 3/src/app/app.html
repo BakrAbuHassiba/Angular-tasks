@@ -1,0 +1,6 @@
+<app-product-form
+[productToEdit]="selectedProduct"
+(sendDataEvent)="addProduct($event)"
+></app-product-form>
+
+<app-product-list [products]="products"></app-product-list>
