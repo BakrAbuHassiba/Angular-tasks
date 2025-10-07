@@ -1,59 +1,64 @@
-# Task5
+# Angular Tasks — Task 4
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.3.
+This is **Task 4** of the Angular Tasks repository by **Bakr AbuHassiba**.  
+In this task, the goal is to build a small Angular application with routing for **Home**, **About**, and **Contact Us** pages, and implement nested child routes and simple forms for contacting via email or mobile.
 
-## Development server
+---
 
-To start a local development server, run:
+##  Features
 
-```bash
-ng serve
-```
+- Navigation bar with routing (`Home`, `About`, `Contact Us`, etc.)
+- **About** page with:
+  - Hero section
+  - Story / mission / vision sections  
+  - Call-to-action to navigate to Contact Us
+- **Contact Us** page with child routes:
+  - `email` child route: simple email contact form
+  - `mobile` child route: simple mobile contact form
+- Use of **Bootstrap 5** for styling
+- Responsive design
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
+##  Project Structure
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Here’s a simplified view of the important parts of the project:
 
-```bash
-ng generate component component-name
-```
+task-4/
+├── src/
+│ ├── app/
+│ │ ├── about/
+│ │ │ ├── about.component.html
+│ │ │ └── ...
+│ │ ├── contact-us/
+│ │ │ ├── contact-us.component.html
+│ │ │ ├── email/
+│ │ │ │ └── email.component.html
+│ │ │ └── mobile/
+│ │ │ └── mobile.component.html
+│ │ ├── home/
+│ │ └── app-routing.module.ts
+│ └── styles.css
+├── angular.json
+└── README.md
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
 
-```bash
-ng generate --help
-```
+- `about/` holds your About page component.
+- `contact-us/` is the parent route with child routes `email` and `mobile`.
+- Routing is configured so that navigating to `/contactus` shows the selection view, and clicking “Email” or “Mobile” loads its respective child component.
+- Forms in the `email` and `mobile` components are simple, Bootstrap-styled forms (without backend integration in this task).
 
-## Building
+---
 
-To build the project run:
+##  Getting Started
 
-```bash
-ng build
-```
+If someone wants to run your project locally, here are the steps:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/BakrAbuHassiba/Angular-tasks.git
+   cd Angular-tasks/task\ 4
+2. Install dependencies:
+   npm install
+3. Serve the application:
+    ng serve -o
