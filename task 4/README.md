@@ -23,7 +23,7 @@ In this task, the goal is to build a small Angular application with routing for 
 ##  Project Structure
 
 Here’s a simplified view of the important parts of the project:
-
+```
 task-4/
 ├── src/
 │ ├── app/
@@ -41,7 +41,7 @@ task-4/
 │ └── styles.css
 ├── angular.json
 └── README.md
-
+```
 
 - `about/` holds your About page component.
 - `contact-us/` is the parent route with child routes `email` and `mobile`.
